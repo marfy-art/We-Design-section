@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.weDesignSection{
+    background: #F9F7F5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.weDesignTitleContent{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px; 
+    margin: auto;
+    align-items: flex-end;
+}
+
+.weDesignTitle{
+    color:#4E677E;
+    font-family: 'Disclaimer', sans-serif;
+    font-size: 460px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.weDesignTitle .weDesignTitleSmallSize{
+    color: var(--Color-accent, #4E677E);
+    text-align: right;
+    font-family: 'Disclaimer', sans-serif;
+    font-size: 190px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.weDesignDescription{
+    color:#062758;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; /* 218.75% */
+    letter-spacing: 1.6px;
+    max-width: 940px;
+    margin: auto;
+}
+
+/* Category design style */
+/* Category design style */
+
+.weDesignCategoryList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.weDesignCategoryCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #fff;
+    position: relative;
+    align-items: flex-end;
+    margin-left: 120px;
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+}
+
+.leftPart{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    height: 200px;
+    /* transition: padding-left 0.5s ease; */
+    transition: padding-left 0.5s ease;
+    opacity: 1;
+    
+}
+
+.weDesignNumber{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background: #EBE8E5;
+    border-radius: 100%;
+}
+
+.number{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Disclaimer', sans-serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+}
+
+.weDesignCategoryTitle{
+    color:  #4E677E;
+    font-family: 'Disclaimer', sans-serif;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105px;
+    padding-bottom: 45px;
+}
+
+.categoryImg{
+    position: absolute;
+    top: 0;
+    right: 480px;
+    opacity: 0;
+    width: 200px;
+    /* width: 630px; */
+    height: auto;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.dropDownBtn{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 30px;
+    position: absolute;
+    right: 120px;
+    bottom: 36px;
+
+    
+   
+}
+
+.icons{
+    position: relative;
+}
+
+.dropDownIcon{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dropDownHoverIcon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.dropDownBtnText{
+    color:  #062758;
+    text-align: right;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+/* Hover effect style */
+/* Hover effect style */
+
+
+
+.weDesignCategoryCard:hover .categoryImg {
+    transform: translate(-50%, -50%) scale(3); /* Larger scale on hover */
+    opacity: 1;
+    animation: zoomDropBounce 0.5s ease forwards; /* Apply the zoom drop bounce animation on hover */
+}
+
+/* @keyframes zoomDropBounce {
+    0% {
+        transform: translate(-50%, -50%) scale(3); 
+    10% {
+        transform: translate(-50%, -50%) scale(2.8); 
+        transform: translate(-50%, -50%) scale(3); 
+    30% {
+        transform: translate(-50%, -50%) scale(2.9); 
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(3); 
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3); 
+    }
+} */
+
+.weDesignCategoryCard:hover .weDesignNumber{
+    background: #4E677E;
+}
+
+/* .weDesignCategoryCard:hover .leftPart{
+    padding-left: 100px;
+    transform: translateX(10px);
+} */
+
+@keyframes dropBounce {
+    0% {
+        transform: translateX(0);
+        opacity: 1; /* Initial opacity */
+    }
+    25% {
+        transform: translateX(-10px);
+        opacity: 0.8; /* Lower opacity */
+    }
+    50% {
+        transform: translateX(20px);
+        opacity: 0.6; /* Lower opacity */
+    }
+    75% {
+        transform: translateX(-10px);
+        opacity: 0.8; /* Lower opacity */
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1; /* Back to initial opacity */
+    }
+}
+
+.weDesignCategoryCard:hover .leftPart {
+    animation: dropBounce 0.5s ease forwards; 
+    padding-left: 100px;
+}
+
+
+.weDesignCategoryCard:hover {
+background: #EBE8E5;
+}
+
+.weDesignCategoryCard:hover .dropDownHoverIcon{
+    opacity: 1;
+}
