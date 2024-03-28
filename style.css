@@ -121,7 +121,7 @@
 
 .categoryImg{
     position: absolute;
-    top: 0;
+    bottom: -8px;
     right: 400px;
     opacity: 0;
     width: 200px;
@@ -187,16 +187,16 @@
      
    
     0% {
-        transform: translate(-50%, -50%) scale(1); 
+        transform: translate(-50%, -50%) scale(0.5); 
         opacity: 1;
     }
    60% {
-        transform: translate(-50%, -50%) scale(4.5); 
+        transform: translate(-50%, -50%) scale(2.5); 
         opacity: 0..5;
     }
 
     100% {
-        transform: translate(-50%, -50%) scale(4); 
+        transform: translate(-50%, -50%) scale(2); 
         opacity: 1;
     }
 } 
